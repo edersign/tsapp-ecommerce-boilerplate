@@ -3,7 +3,7 @@
   packages = [
     pkgs.nodejs_22
   ];
-  idx.extensions = [];
+  idx.extensions = [ "bradlc.vscode-tailwindcss" "dbaeumer.vscode-eslint" "esbenp.prettier-vscode" "rvest.vs-code-prettier-eslint" "YoavBls.pretty-ts-errors"];
   idx.previews = {
     previews = {
       web = {

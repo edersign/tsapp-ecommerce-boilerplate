@@ -1,12 +1,20 @@
-//import { useSuspenseQuery } from "@tanstack/react-query";
+
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
-//import { Suspense } from "react";
+import { Suspense } from "react";
+import { getProducts } from "../api/graphql";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
+  loader: () => getProducts(""),
 });
 
 function HomePage() {
+  const { data } = useSuspenseQuery({
+    queryKey: ["products"],
+    queryFn: () => getProducts(""),
+  });
+
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-10 p-2">
       <div className="flex flex-col items-center gap-4">
@@ -19,33 +27,26 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-2">
-        <p className="text-foreground/80 max-sm:text-xs">
-          A minimal starter template for{" "}
-          <a
-            className="text-foreground group"
-            href="https://tanstack.com/start/latest"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            🏝️ <span className="group-hover:underline">TanStack Start</span>
-          </a>
-          .
-        </p>
-        <div className="flex items-center gap-3">
-          <a
-            className="text-foreground/80 hover:text-foreground underline max-sm:text-sm"
-            href="https://github.com/dotnize/react-tanstarter"
-            target="_blank"
-            title="Template repository on GitHub"
-            rel="noreferrer noopener"
-          >
-            dotnize/react-tanstarter
-          </a>
-
-     
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="flex flex-wrap justify-center gap-4">
+          {data.data.getBikeListing.edges.map((edge) => (
+            <div key={edge.node.id} className="max-w-xs rounded overflow-hidden shadow-lg">
+              <img className="w-full" src={edge.node.thumbnail} alt={edge.node.name} />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">{edge.node.name}</div>
+              </div>
+            </div>
+          ))}
+          {data.data.getProductsListing.edges.map((edge) => (
+            <div key={edge.node.id} className="max-w-xs rounded overflow-hidden shadow-lg">
+              <img className="w-full" src={edge.node.thumbnail} alt={edge.node.name} />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">{edge.node.name}</div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
+      </Suspense>
     </div>
   );
 }
