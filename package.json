@@ -18,6 +18,8 @@
     "@tanstack/react-router": "^1.132.31",
     "@tanstack/react-router-ssr-query": "^1.132.31",
     "@tanstack/react-start": "^1.132.31",
+    "npm-check-updates": "^19.0.0",
+    "pnpm": "^10.17.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "zustand": "^5.0.8"
@@ -34,8 +36,8 @@
     "@types/node": "^24.6.2",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
-    "babel-plugin-react-compiler": "^19.1.0-rc.3",
     "@vitejs/plugin-react": "^5.0.4",
+    "babel-plugin-react-compiler": "^19.1.0-rc.3",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "6.1.0",
@@ -43,7 +45,7 @@
     "prettier-plugin-organize-imports": "^4.3.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.45.0",
-    "vite-tsconfig-paths": "^5.1.4",
-    "vite": "^7.1.8"
+    "vite": "^7.1.8",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
