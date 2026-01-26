@@ -24,8 +24,8 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0
       pnpm:
-        specifier: ^10.17.1
-        version: 10.17.1
+        specifier: ^10.28.2
+        version: 10.28.2
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -1561,8 +1561,8 @@ packages:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
 
-  pnpm@10.17.1:
-    resolution: {integrity: sha512-F8Vg/KSGeulHOjiZrYSogzSRTzeb5G1FXL+S5c9LOdNJhdRS0lg7rxmWf6dstcF7yeJFUp0LmHRXIapyAOyveg==}
+  pnpm@10.28.2:
+    resolution: {integrity: sha512-QYcvA3rSL3NI47Heu69+hnz9RI8nJtnPdMCPGVB8MdLI56EVJbmD/rwt9kC1Q43uYCPrsfhO1DzC1lTSvDJiZA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -1633,8 +1633,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rou3@0.7.5:
-    resolution: {integrity: sha512-bwUHDHw1HSARty7TWNV71R0NZs5fOt74OM+hcMdJyPfchfRktEmxLoMSNa7PwEp6WqJ0a3feKztsIfTUEYhskw==}
+  rou3@0.7.12:
+    resolution: {integrity: sha512-iFE4hLDuloSWcD7mjdCDhx2bKcIsYbtOTpfH5MHHLSKMOUyjqQXTeZVa289uuwEGEKFoE/BAPbhaU4B774nceg==}
 
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -1693,6 +1693,11 @@ packages:
 
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+
+  srvx@0.8.16:
+    resolution: {integrity: sha512-hmcGW4CgroeSmzgF1Ihwgl+Ths0JqAJ7HwjP2X7e3JzY7u4IydLMcdnlqGQiQGUswz+PO9oh/KtCpOISIvs9QQ==}
+    engines: {node: '>=20.16.0'}
+    hasBin: true
 
   srvx@0.8.9:
     resolution: {integrity: sha512-wYc3VLZHRzwYrWJhkEqkhLb31TI0SOkfYZDkUhXdp3NoCnNS0FqajiQszZZjfow/VYEuc6Q5sZh9nM6kPy2NBQ==}
@@ -1862,6 +1867,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -3506,8 +3512,8 @@ snapshots:
     dependencies:
       cookie-es: 2.0.0
       fetchdts: 0.1.7
-      rou3: 0.7.5
-      srvx: 0.8.9
+      rou3: 0.7.12
+      srvx: 0.8.16
 
   has-flag@4.0.0: {}
 
@@ -3687,7 +3693,7 @@ snapshots:
 
   picomatch@4.0.3: {}
 
-  pnpm@10.17.1: {}
+  pnpm@10.28.2: {}
 
   postcss@8.5.6:
     dependencies:
@@ -3763,7 +3769,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.52.3
       fsevents: 2.3.3
 
-  rou3@0.7.5: {}
+  rou3@0.7.12: {}
 
   run-parallel@1.2.0:
     dependencies:
@@ -3804,6 +3810,8 @@ snapshots:
   source-map@0.7.6: {}
 
   sprintf-js@1.0.3: {}
+
+  srvx@0.8.16: {}
 
   srvx@0.8.9:
     dependencies:
